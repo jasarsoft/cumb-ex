@@ -15,9 +15,10 @@
 
     <asp:GridView runat="server" ID="studentsGrid"
         ItemType="ContosoUniversityModelBinding.Models.Student" DataKeyNames="StudentID" 
-        SelectMethod="studentsGrid_GetData"
-        UpdateMethod="studentsGrid_UpdateItem"
-        DeleteMethod="studentsGrid_DeleteItem"
+        SelectMethod="GetStudents"
+        UpdateMethod="UpdateStudent" 
+        DeleteMethod="DeleteStudent"
+        OnCallingDataMethods="studentsGrid_CallingDataMethods"
         AllowSorting="true"
         AllowPaging="true" PageSize="4" 
         AutoGenerateEditButton="true" 

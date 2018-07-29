@@ -24,5 +24,10 @@ namespace ContosoUniversityModelBinding
                 .Where(e => e.StudentID == studentID);
             return query;
         }
+
+        protected void coursesGrid_CallingDataMethods(object sender, CallingDataMethodsEventArgs e)
+        {
+            e.DataMethodsObject = new ContosoUniversityModelBinding.BLL.SchoolBL();
+        }
     }
 }

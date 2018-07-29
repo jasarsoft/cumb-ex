@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:GridView runat="server" ID="coursesGrid"
         ItemType="ContosoUniversityModelBinding.Models.Enrollment"
-        SelectMethod="coursesGrid_GetData" AutoGenerateColumns="false">
+        SelectMethod="GetCourses"
+        OnCallingDataMethods="coursesGrid_CallingDataMethods"
+        AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField HeaderText="Title" DataField="Course.Title" />
             <asp:BoundField HeaderText="Credits" DataField="Course.Credits" />
