@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using ContosoUniversityModelBinding.Models;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Web.ModelBinding;
 
 namespace ContosoUniversityModelBinding
 {
@@ -23,10 +24,23 @@ namespace ContosoUniversityModelBinding
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IQueryable<ContosoUniversityModelBinding.Models.Student> studentsGrid_GetData()
+        /*public IQueryable<ContosoUniversityModelBinding.Models.Student> studentsGrid_GetData()
         {
             SchoolContext db = new SchoolContext();
             var query = db.Students.Include(s => s.Enrollments.Select(e => e.Course));
+            return query;
+        }*/
+
+        public IQueryable<ContosoUniversityModelBinding.Models.Student> studentsGrid_GetData([Control] AcademicYear? displayYear)
+        {
+            SchoolContext db = new SchoolContext();
+            var query = db.Students.Include(s => s.Enrollments.Select(e => e.Course));
+
+            if (displayYear != null)
+            {
+                query = query.Where(s => s.Year == displayYear);
+            }
+
             return query;
         }
 
