@@ -28,6 +28,7 @@ namespace ContosoUniversityModelBinding.Migrations
             //    );
             //
 
+
             context.Students.AddOrUpdate(
                  new Student
                  {
