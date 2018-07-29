@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Students.aspx.cs" Inherits="ContosoUniversityModelBinding.Student" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ValidationSummary ShowModelStateErrors="true" runat="server" />
+    <asp:HyperLink NavigateUrl="~/AddStudent" Text="Add New Student" runat="server" />
     <asp:GridView runat="server" ID="studentsGrid"
         ItemType="ContosoUniversityModelBinding.Models.Student" DataKeyNames="StudentID" 
         SelectMethod="studentsGrid_GetData"
