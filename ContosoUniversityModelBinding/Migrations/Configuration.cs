@@ -29,7 +29,7 @@ namespace ContosoUniversityModelBinding.Migrations
             //
 
 
-            context.Students.AddOrUpdate(
+            /*context.Students.AddOrUpdate(
                  new Student
                  {
                      FirstName = "Carson",
@@ -109,7 +109,9 @@ namespace ContosoUniversityModelBinding.Migrations
                 new Enrollment { StudentID = 7, CourseID = 5, Grade = 2 }
                 );
 
-            context.SaveChanges();
+            context.SaveChanges();*/
+
+            
         }
     }
 }

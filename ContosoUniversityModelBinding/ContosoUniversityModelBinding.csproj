@@ -561,6 +561,10 @@
     <Compile Include="Migrations\201807282359198_initial.Designer.cs">
       <DependentUpon>201807282359198_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807291442575_AddEnrollmentDate.cs" />
+    <Compile Include="Migrations\201807291442575_AddEnrollmentDate.Designer.cs">
+      <DependentUpon>201807291442575_AddEnrollmentDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\UniversityModels.cs" />
@@ -601,6 +605,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807282359198_initial.resx">
       <DependentUpon>201807282359198_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807291442575_AddEnrollmentDate.resx">
+      <DependentUpon>201807291442575_AddEnrollmentDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
